@@ -1,0 +1,7 @@
+CREATE (apple:Organisation {name: 'Apple'})
+CREATE (nike:Organisation {name: 'Nike'})
+CREATE (sj:Person {name: 'Steve Jobs'})
+CREATE (tc:Person {name: 'Tim Cook'})
+CREATE ((sj)-[:employee_of {since: 1972, until: 2012}]->(apple))
+CREATE ((tc)-[:employee_of {since: 1984}]->(apple))
+CREATE ((tc)-[:board_member_of {since: 2012}]->(nike))
