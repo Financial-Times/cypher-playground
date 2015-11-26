@@ -18,7 +18,8 @@ Use the UI to get swinging balls:
 [Graph Gist Wiki]{https://github.com/neo4j-contrib/graphgist/wiki}
 
 
-## Some Stuff
+## Stuff about types and
+[List of value types]{http://neo4j.com/docs/stable/property-values-detailed.html}
 [Dates no supported - use long or strings]{http://stackoverflow.com/questions/21643896/neo4j-date-data-types}
 Do we need Thing? (all nodes are things)
 Concepts - Roles work, but what about organisations
