@@ -99,3 +99,10 @@ MERGE (crEmpRec2:Membership:Thing {start: 2015, title: 'Hacker extraordinaire'})
 MERGE ((carlos)-[:MEMBERSHIP]->(crEmpRec2))
 MERGE ((crEmpRec2)-[:MEMBER_OF]->(ft))
 MERGE ((crEmpRec2)-[:AS]->(contractor))
+
+// Questions
+// Who has or had the role of COO with Apple
+MATCH (o1:Organisation{name:'Apple'})-[:MEMBER_OF]-(m1:Membership)-[:AS]-(r1:Role{name:'COO'})
+MATCH (r2:Role{name:'COO'})-[:AS]-(m2:Membership)-[:MEMBERSHIP]-(p2:Person)
+WHERE m1 = m2
+RETURN o1, m1, r2, p2;
