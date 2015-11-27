@@ -1,10 +1,3 @@
-// Looks like you cannot link to nodes from properties of relationships
-// CREATE
-//  (kanzi:Company:Organisation:Thing {name: 'Kanzi Limited'})
-//  (dgem:Person:Thing {name: 'Dan Murphy'})
-//  (dir:Role:Thing {name: 'Director'})
-//  ((dgem)-[:MEMBER_OF {start: 2007, role:(dir) }]->(kanzi))
-
 // Some Roles
 MERGE (coo:Role:Thing {name: 'COO'})
 MERGE (ceo:Role:Thing {name: 'CEO'})
@@ -103,6 +96,6 @@ MERGE ((crEmpRec2)-[:AS]->(contractor))
 // Questions
 // Who has or had the role of COO with Apple
 MATCH (o1:Organisation{name:'Apple'})-[:MEMBER_OF]-(m1:Membership)-[:AS]-(r1:Role{name:'COO'})
-MATCH (r2:Role{name:'COO'})-[:AS]-(m2:Membership)-[:MEMBERSHIP]-(p2:Person)
+MATCH (r2:Role{name:'COO'})-[:AS]-(m2:Membership {})-[:MEMBERSHIP]-(p2:Person)
 WHERE m1 = m2
 RETURN o1, m1, r2, p2;
