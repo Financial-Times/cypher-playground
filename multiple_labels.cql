@@ -31,10 +31,30 @@ MERGE (cliche:PrivateCompany:Company:Organisation:Thing {name: 'Cliche Solutions
 MERGE (dgem:Person:Thing {name: 'Dan Murphy'})
 MERGE (carlos:Person:Thing {name: 'Carlos Roman'})
 MERGE (tim:Person:Thing {name: 'Tim Cook'})
+MERGE (steve:Person:Thing {name: 'Steve Jobs'})
 MERGE (john:Person:Thing {name: 'John Fallon'})
 MERGE (marjorie:Person:Thing {name: 'Marjorie Scardino'})
 
 // Memberships
+
+// Steve & Apple (early years)
+MERGE (sjER1:Employment:Membership:Thing {start: 1976, end: 1986})
+MERGE ((steve)-[:EMPLOYMENT {start: 123, end:7778}]->(sjER1))
+MERGE ((sjER1)-[:EMPLOYEE_OF]->(apple))
+MERGE ((sjER1)-[:AS]->(ceo))
+
+// Steve & Apple (return)
+MERGE (sjER2:Employment:Membership:Thing {start: 1997, end: 2011})
+MERGE ((steve)-[:EMPLOYMENT]->(sjER2))
+MERGE ((sjER2)-[:EMPLOYEE_OF]->(apple))
+MERGE ((sjER2)-[:AS]->(ceo))
+
+// Tim & Apple
+MERGE (tcER1:Employment:Membership:Thing {start: 1998, title: 'Chief Executive Officer & Director'})
+MERGE ((tim)-[:EMPLOYMENT]->(tcER1))
+MERGE ((tcER1)-[:EMPLOYEE_OF]->(apple))
+MERGE ((tcER1)-[:AS {start: 2011}]->(ceo))
+MERGE ((tcER1)-[:AS {start: 1998}]->(coo))
 
 // Marjorie & Pearson
 MERGE (msEmpRec1:Employment:Membership:Thing {start: 1997, end:2012, title: 'Chief Executive Officer'})
