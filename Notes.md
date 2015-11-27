@@ -26,6 +26,11 @@ Concepts - Roles work, but what about organisations
 
 ## Sample Data
 
+### Steve Jobs
+* Person uuid cb36028e-7a87-3648-b8e4-399e331bbe98
+
+
+
 ### Tim Cook
 * Person: 8138ca3f-b80d-3ef8-ad59-6a9b6ea5f15e
 * Membership: 3f1822dc-07e3-3777-84a6-5e155b914980
