@@ -1,0 +1,63 @@
+MATCH (o:Organisation {properName:"Apple, Inc."})-[e:EMPLOYEE]-(m:Membership)-[:MEMBERSHIP]-(p:Person)
+MATCH (m)-[:ROLE]->(r:Role {prefLabel:"Chief Executive Officer"})
+return p, m, r
+
+
+
+MATCH (o:Organisation {properName:"Princeton University"})-[e:EMPLOYEE]-(univ:Membership)-[:MEMBERSHIP]-(p:Person)
+MATCH (univ)-[:ROLE]->(r:Role {prefLabel:"Undergraduate Degree"})
+
+MATCH (company:Organisation)-[:EMPLOYEE]-(empl:Membership)-[em:MEMBERSHIP]-(p)
+MATCH (empl)-[:ROLE]-(r2:Role)
+where (r2.prefLabel <> "Undergraduate Degree" and r2.prefLabel<>"Graduate Degree" and r2.prefLabel<>"Masters Business Admin" and r2.prefLabel<>"Doctorate Degree")
+and company.prefLabel="Harvard University"
+return company.prefLabel , r2.prefLabel
+
+
+MATCH (o:Organisation {properName:"Princeton University"})-[e:EMPLOYEE]-(univ:Membership)-[:MEMBERSHIP]-(p:Person)
+MATCH (univ)-[:ROLE]->(r:Role {prefLabel:"Undergraduate Degree"})
+
+MATCH (company:Organisation)-[:EMPLOYEE]-(empl:Membership)-[em:MEMBERSHIP]-(p)
+MATCH (empl)-[:ROLE]-(r2:Role)
+where (r2.prefLabel <> "Undergraduate Degree" and r2.prefLabel<>"Graduate Degree" and r2.prefLabel<>"Masters Business Admin" and r2.prefLabel<>"Doctorate Degree")
+return company.prefLabel , count(em) order by count(em) desc
+
+
+MATCH (o:Organisation {properName:"Harvard Business School"})-[e:EMPLOYEE]-(univ:Membership)-[:MEMBERSHIP]-(p:Person)
+MATCH (univ)-[:ROLE]->(r:Role {prefLabel:"Masters Business Admin"})
+MATCH (company:Organisation)-[:EMPLOYEE]-(empl:Membership)-[em:MEMBERSHIP]-(p)
+MATCH (empl)-[:ROLE]-(r2:Role)
+where (r2.prefLabel = "Corporate Officer/Principal" or r2.prefLabel = "President" or  r2.prefLabel = "Chief Executive Officer" or r2.prefLabel="Director of Finance/CFO" or r2.prefLabel="Chief Operating Officer")
+return r2.prefLabel, count(r2) order by count(r2) desc
+
+MATCH (o:Organisation {properName:"Harvard Business School"})-[e:EMPLOYEE]-(univ:Membership)-[:MEMBERSHIP]-(p:Person)
+MATCH (univ)-[:ROLE]->(r:Role {prefLabel:"Masters Business Admin"})
+MATCH (company:Organisation)-[:EMPLOYEE]-(empl:Membership)-[em:MEMBERSHIP]-(p)
+MATCH (empl)-[:ROLE]-(r2:Role)
+where (r2.prefLabel = "Corporate Officer/Principal" or r2.prefLabel = "President" or  r2.prefLabel = "Chief Executive Officer" or r2.prefLabel="Director of Finance/CFO" or r2.prefLabel="Chief Operating Officer")
+return company.prefLabel, r2.prefLabel, p.name
+
+
+match (p:Person) where p.name contains "Phil" and p.name contains "Knight" and p.name contains "Hamps" return p
+
+
+MATCH (o:Organisation {properName:"Harvard Business School"})-[e:EMPLOYEE]-(univ:Membership)-[:MEMBERSHIP]-(p:Person)
+MATCH (univ)-[:ROLE]->(r:Role {prefLabel:"Masters Business Admin"})
+MATCH (company:Organisation)-[:EMPLOYEE]-(empl:Membership)-[em:MEMBERSHIP]-(p)
+MATCH (empl)-[:ROLE]-(r2:Role)
+where ( r2.prefLabel = "President" or  r2.prefLabel = "Chief Executive Officer" or r2.prefLabel="Director of Finance/CFO" or r2.prefLabel="Chief Operating Officer")
+and company.prefLabel="American Express Co."
+return *
+
+
+
+MATCH (o:Organisation {properName:"Harvard Business School"})-[e:EMPLOYEE]-(univ:Membership)-[:MEMBERSHIP]-(p:Person)
+MATCH (univ)-[:ROLE]->(r:Role {prefLabel:"Masters Business Admin"})
+MATCH (company:Organisation)-[:EMPLOYEE]-(empl:Membership)-[em:MEMBERSHIP]-(p)
+MATCH (empl)-[er:ROLE]-(roleEmp:Role)
+MATCH (cont:Content)-[r2:MENTIONS]->(company) 
+where er.terminationDate="0001-01-01T00:00:00Z" and has(er.inceptionDate)
+return p, roleEmp, company, count(r2) order by count(r2) desc
+
+
+
