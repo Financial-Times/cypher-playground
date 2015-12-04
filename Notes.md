@@ -33,12 +33,14 @@ Concepts - Roles work, but what about organisations
 * Richard Branson - `65e6575d-6a5d-34b9-b0a9-1d87e4c23f8c`
 * Martha Lane Fox - `ad60f5b2-4306-349d-92d8-cf9d9572a6f6`
 * Ronald Willis - `143ba45c-2fb3-35bc-b227-a6ed80b5c517`
+* Woz - `ecfdeedf-59c0-340f-95d6-0ad3dc7fea8d`
 
 ### Companies and organisations
 * EMC Corp - `2e9579f5-37c6-3b2f-859b-0865ab5d6867`
 * Documentum Inc _(sub of EMC)_ - `cedbfa34-b8ec-3bee-8304-e074b53021e8`
 * Amstrad Ltd - `3fb511e2-d116-3eca-88aa-9196ec84d93d`
 * Apple Inc. - `2384fa7a-d514-3d6a-a0ea-3a711f66d0d8`
+* Brown Brothers Harriman Private Equity Group - `1f1a2428-5533-32b4-b32a-8c0ce1386923`
 
 ### Transformers
 * Memberships: http://ftaps50665-law1a-eu-t.osb.ft.com/transformers/memberships/

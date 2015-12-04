@@ -39,3 +39,10 @@ A worked example based on someone wanting to look at:
 ```
 MATCH (po:Organisation)<-[:SUB_ORG_OF]-(o:Organisation{prefLabel:'Documentum, Inc.'})<-[:SUB_ORG_OF]-(so:Organisation) return po,o, collect (so) as subsidaries;
 ```
+
+```
+MATCH (o:Organisation{uuid: '1f1a2428-5533-32b4-b32a-8c0ce1386923'})
+OPTIONAL MATCH (o)<-[:SUB_ORG_OF]-(s:Organisation)
+OPTIONAL MATCH (p:Organisation)<-[:SUB_ORG_OF]-(o)
+RETURN p as Parent, o as Organisation, collect(s) as SubOrgs;
+```
