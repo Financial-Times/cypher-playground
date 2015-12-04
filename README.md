@@ -1,5 +1,5 @@
 # Cypher modeling spike
-Different approaches to modeling using cypher.
+Different approaches to modeling using cypher. Also see [Notes.md](Notes.md)
 
 ## Models
 Most complexity seems to be around how we model the relationships between the people we know of, the organisations they are associated with and  and their Currently three approaches identified, in order of perceived complexity.
@@ -13,6 +13,7 @@ Although option 2 ('named relationships') is less complex than option 3, there a
 * Named relationships is available on http://ftvar54228-law1c-eu-t:8080/browser/
 * Memberships as Nodes ("Facts as nodes") http://ftvar54224-law1c-eu-t:8080/browser/
 There are slight differences in the volume of data loaded due to the data being taken from different snapshots.
+
 
 ## Questions to ask the model
 
@@ -31,7 +32,10 @@ To achieve to get parity, extracted from the [API Endpoints](https://docs.google
 
 ## Sample Queries
 
-### Organisations
+### Organisation Read
+A worked example based on someone wanting to look at:
+* EMC Corp (uuid:'2e9579f5-37c6-3b2f-859b-0865ab5d6867'), which is a top level public company
+*
 ```
 MATCH (po:Organisation)<-[:SUB_ORG_OF]-(o:Organisation{prefLabel:'Documentum, Inc.'})<-[:SUB_ORG_OF]-(so:Organisation) return po,o, collect (so) as subsidaries;
 ```

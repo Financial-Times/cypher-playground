@@ -19,15 +19,22 @@ Use the UI to get swinging balls:
 
 
 ## Stuff about types and
-[List of value types]{http://neo4j.com/docs/stable/property-values-detailed.html}
-[Dates no supported - use long or strings]{http://stackoverflow.com/questions/21643896/neo4j-date-data-types}
+[List of value types](http://neo4j.com/docs/stable/property-values-detailed.html)
+[Dates are not supported - use long or strings](http://stackoverflow.com/questions/21643896/neo4j-date-data-types)
+[You can have multiple relationships of the same name](http://stackoverflow.com/questions/7601346/multiple-relationships-of-the-same-type-but-with-different-properties-between-th)
 Do we need Thing? (all nodes are things)
 Concepts - Roles work, but what about organisations
 
-## Sample Data
+## Sample Data UUIDs
+### People
+* Steve Job - `cb36028e-7a87-3648-b8e4-399e331bbe98`
+* Tim Cook - `8138ca3f-b80d-3ef8-ad59-6a9b6ea5f15e`
+* Alan Sugar - `3fb511e2-d116-3eca-88aa-9196ec84d93d`
 
-### Steve Jobs
-* Person uuid cb36028e-7a87-3648-b8e4-399e331bbe98
+
+### Companies and organisations
+* EMC Corp - `2e9579f5-37c6-3b2f-859b-0865ab5d6867`
+* Amstrad Ltd - `3fb511e2-d116-3eca-88aa-9196ec84d93d`
 
 
 
