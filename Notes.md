@@ -30,30 +30,21 @@ Concepts - Roles work, but what about organisations
 * Steve Job - `cb36028e-7a87-3648-b8e4-399e331bbe98`
 * Tim Cook - `8138ca3f-b80d-3ef8-ad59-6a9b6ea5f15e`
 * Alan Sugar - `3fb511e2-d116-3eca-88aa-9196ec84d93d`
-
+* Richard Branson - `65e6575d-6a5d-34b9-b0a9-1d87e4c23f8c`
+* Martha Lane Fox - `ad60f5b2-4306-349d-92d8-cf9d9572a6f6`
+* Ronald Willis - `143ba45c-2fb3-35bc-b227-a6ed80b5c517`
 
 ### Companies and organisations
 * EMC Corp - `2e9579f5-37c6-3b2f-859b-0865ab5d6867`
+* Documentum Inc _(sub of EMC)_ - `cedbfa34-b8ec-3bee-8304-e074b53021e8`
 * Amstrad Ltd - `3fb511e2-d116-3eca-88aa-9196ec84d93d`
-
-
-
-### Tim Cook
-* Person: 8138ca3f-b80d-3ef8-ad59-6a9b6ea5f15e
-* Membership: 3f1822dc-07e3-3777-84a6-5e155b914980
-* Organisation: 2384fa7a-d514-3d6a-a0ea-3a711f66d0d8
-* Role: b4d96423-d877-3e54-91bd-22f7a74ac388
-
-### Ronald Willis
-* Person: 143ba45c-2fb3-35bc-b227-a6ed80b5c517
-* Membership: dbdd3945-8dde-3324-ac8e-1103603a5d61
-* Organisation: bec06d64-f944-3d0b-b991-47910627f6bb
+* Apple Inc. - `2384fa7a-d514-3d6a-a0ea-3a711f66d0d8`
 
 ### Transformers
-* Membership: http://ftaps50665-law1a-eu-t.osb.ft.com/transformers/memberships/
+* Memberships: http://ftaps50665-law1a-eu-t.osb.ft.com/transformers/memberships/
 * Roles: http://ftaps50665-law1a-eu-t.osb.ft.com/transformers/memberships/
 * People: http://ftaps35629-law1a-eu-t.osb.ft.com/transformers/people/
-* Organisation: http://ftaps39403-law1a-eu-t/transformers/organisations/
+* Organisations: http://ftaps39403-law1a-eu-t/transformers/organisations/
 
 ### Read APIs
 * Membership:
