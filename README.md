@@ -7,6 +7,13 @@ Most complexity seems to be around how we model the relationships between the pe
 1. Named relationships, e.g. `:CIO`, `:CFO` representing roles and more generic `:MEMBER`
 1. Memberships as Nodes, following the "Model facts as node" principle
 
+Although option 2 ('named relationships') is less complex than option 3, there are some concerns that it may be not be rich enough for anticipated use cases. Option 3 'facts as nodes' addresses these concerns add some complexity, yet is more elegant.
+
+## Neo4J instances
+* Named relationships is available on http://ftvar54228-law1c-eu-t:8080/browser/
+* Memberships as Nodes ("Facts as nodes") http://ftvar54224-law1c-eu-t:8080/browser/
+There are slight differences in the volume of data loaded due to the data being taken from different snapshots.
+
 ## Questions to ask the model
 
 ### Current Public APIs
